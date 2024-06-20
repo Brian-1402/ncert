@@ -71,13 +71,13 @@
 	- *(you should always state the meaning of the variables when defining formulas)*
 	Let u be the distance of the object from its pole, called the object distance. Let v be the distance of the image from the pole of the mirror, called the image distance. Let f be the focal length. The signs of the variables are according to the spherical mirror sign convention.
 	- The formula is: 
-	$$\frac{1}{v} + \frac{1}{u} = \frac{1}{f}$$
+$$\frac{1}{v} + \frac{1}{u} = \frac{1}{f}$$
 18. Define magnification and it's formula.
 	Ans:
 	- Magnification produced by a spherical mirror gives the relative extent to which the image of an object is magnified with respect to the object size. 
 	- It is expressed as the ratio of the height of the image to the height of the object.
-	$$m = \frac{Height \; of \; the \; image \; (h')}{Height \; of \; the \; object \; (h)}$$
-	$$m = \frac{h'}{h}$$
+$$m = \frac{Height \; of \; the \; image \; (h')}{Height \; of \; the \; object \; (h)}$$
+$$m = \frac{h'}{h}$$
 19. What is the relation between the sign of magnification and whether the image is real or virtual?
 	Ans:
 	- Negative magnification - real.
@@ -85,9 +85,10 @@
 20. Give the formula for magnification in terms of i) heights from axis, ii) distances from origin.
 	Ans:
 	- with heights:
-	$$m = \frac{Height \; of \; the \; image \; (h')}{Height \; of \; the \; object \; (h)}$$
-	- with distances: $$ m = - \frac{v}{u} $$
-21. Define refraction.
+$$m = \frac{Height \; of \; the \; image \; (h')}{Height \; of \; the \; object \; (h)}$$
+	- with distances: 
+$$ m = - \frac{v}{u} $$
+1. Define refraction.
 	Ans: When travelling **obliquely** from one medium to another, the direction of propagation of light in the second medium changes. This phenomenon is known as refraction of light.
 22. What is the manner in which light bends, between mediums of different optical density?
 	Ans: 
@@ -128,11 +129,11 @@
 	- $\angle r$ - Angle of reflection
 3. State the 4 important different ways in which rays reflect off concave mirrors.
 	Ans:
-	1) A ray parallel to the principal axis, after reflection, will pass through the principal focus in case of a concave mirror or appear to diverge from the principal focus in case of a convex mirror.
-	2) A ray passing through the principal focus of a concave mirror or a ray which is directed towards the principal focus of a convex mirror, after reflection, will emerge parallel to the principal axis.
-	3) A ray passing through the centre of curvature of a concave mirror or directed in the direction of the centre of curvature of a convex mirror, after reflection, is reflected back along the same path.
-	4) A ray incident at the pole obliquely to the principal axis, is reflected obliquely, according to laws of reflection.
-	  *in other words,* A ray incident on the pole reflects according to the laws of reflection with normal along the principal axis.
+	i) A ray parallel to the principal axis, after reflection, will pass through the principal focus in case of a concave mirror or appear to diverge from the principal focus in case of a convex mirror.
+	ii) A ray passing through the principal focus of a concave mirror or a ray which is directed towards the principal focus of a convex mirror, after reflection, will emerge parallel to the principal axis.
+	iii) A ray passing through the centre of curvature of a concave mirror or directed in the direction of the centre of curvature of a convex mirror, after reflection, is reflected back along the same path.
+	iv) A ray incident at the pole obliquely to the principal axis, is reflected obliquely, according to laws of reflection.
+	*in other words,* A ray incident on the pole reflects according to the laws of reflection with normal along the principal axis.
 4. State the rules of the new cartesian sign convention for spherical mirrors.
 	*(Unlikely that they will ask such a question, but you should know the rules properly)* 
 5. Draw diagram and label different parts of a concave lens.
