@@ -1,11 +1,11 @@
-## Short answer questions
+## Reflection
+### Short answer type
 
 1. State the laws of reflection.
 	- The angle of incidence is equal to the angle of reflection, 
 	- The incident ray, the normal to the mirror at the point of incidence and the reflected ray, all lie in the same plane.
    
 2. Properties of reflected image by a plane mirror.
-	- Ans:
 	- Image formed by a plane mirror is always virtual and erect.
 	- The size of the image is equal to that of the object.
 	- The image formed is as far behind the mirror as the object is in front of it. 
@@ -69,21 +69,8 @@
 	- with heights:
 	$$m = \frac{Height \; of \; the \; image \; (h')}{Height \; of \; the \; object \; (h)}$$
 	- with distances: $$ m = - \frac{v}{u} $$
-21. Define refraction.
-	- When travelling **obliquely** from one medium to another, the direction of propagation of light in the second medium changes. This phenomenon is known as refraction of light.
-22. What is the manner in which light bends, between mediums of different optical density?
-	- Rarer to denser medium - refracted ray bends towards the normal.
-	- Denser to rarer medium - refracted ray bends away from the normal.
-	- *(Hint: Think of it as this: in denser medium, light is slower. so for light to "catch up", it bends towards normal to travel less oblique and more straight, to cover less distance. Vice versa for denser to rarer, it got too fast so to cover less distance in that time, it travels more bent.) Of course this is not a completely accurate analogy but it helps to give an intuition, instead of byhearting that "lesser to denser = bend towards normal" etc.*
-23. State the laws of refraction.
-24. Define refractive index between two mediums and it's formula. Also give formula for absolute refractive index of a single medium.
-25. Explain what is optical density.
-26. State the two types of spherical lenses and 2 of their properties each.
-27. What is special about the optical centre of a spherical lens?
-28. Define i) centres of curvature, ii) principal axis, iii) optical centre, iv) aperture, v) principal foci, vi) focal length.
-29. What is the method to locate the principal focus of a convex lens?
 
-## Long answer questions
+### Long answer type
 
 1. Draw diagram and label different parts of a concave mirror.
 	- ![[./_images/ch9_concave_mirror.png]]
@@ -113,7 +100,26 @@
 	- *in other words,* A ray incident on the pole reflects according to the laws of reflection with normal along the principal axis.
 4. State the rules of the new cartesian sign convention for spherical mirrors.
 	- *(Unlikely that they will ask such a question, but you should know the rules properly)* 
-5. Draw diagram and label different parts of a concave lens.
+## Refraction
+### Short answer type
+
+1. Define refraction.
+	- When travelling **obliquely** from one medium to another, the direction of propagation of light in the second medium changes. This phenomenon is known as refraction of light.
+2. What is the manner in which light bends, between mediums of different optical density?
+	- Rarer to denser medium - refracted ray bends towards the normal.
+	- Denser to rarer medium - refracted ray bends away from the normal.
+	- *(Hint: Think of it as this: in denser medium, light is slower. so for light to "catch up", it bends towards normal to travel less oblique and more straight, to cover less distance. Vice versa for denser to rarer, it got too fast so to cover less distance in that time, it travels more bent.) Of course this is not a completely accurate analogy but it helps to give an intuition, instead of byhearting that "lesser to denser = bend towards normal" etc.*
+3. State the laws of refraction.
+4. Define refractive index between two mediums and it's formula. Also give formula for absolute refractive index of a single medium.
+5. Explain what is optical density.
+6. State the two types of spherical lenses and 2 of their properties each.
+7. What is special about the optical centre of a spherical lens?
+8. Define i) centres of curvature, ii) principal axis, iii) optical centre, iv) aperture, v) principal foci, vi) focal length.
+9. What is the method to locate the principal focus of a convex lens?
+
+### Long answer type
+
+1. Draw diagram and label different parts of a concave lens.
 	- ![[./_images/ch9_concave_lens.png]]
 	- O - optical centre
 	- F1 - principal focus
@@ -121,7 +127,7 @@
 	- OC1 - radius of curvature
 	- OF1 - focal length
 	- MN - aperture
-6. Draw diagram and label different parts of a convex lens.
+2. Draw diagram and label different parts of a convex lens.
 	- ![[./_images/ch9_convex_lens.png]]
 	- O - optical centre
 	- F1 - principal focus
