@@ -55,25 +55,23 @@
 17. Define the mirror formula.
 	- *(you should always state the meaning of the variables when defining formulas)*
 	- Let u be the distance of the object from its pole, called the object distance. Let v be the distance of the image from the pole of the mirror, called the image distance. Let f be the focal length. The signs of the variables are according to the spherical mirror sign convention.
-	- The formula is: 
-	$$\frac{1}{v} + \frac{1}{u} = \frac{1}{f}$$
+	- The formula is: $\frac{1}{v} + \frac{1}{u} = \frac{1}{f}$
 18. Define magnification and it's formula.
 	- Magnification produced by a spherical mirror gives the relative extent to which the image of an object is magnified with respect to the object size. 
 	- It is expressed as the ratio of the height of the image to the height of the object.
-	$$m = \frac{Height \; of \; the \; image \; (h')}{Height \; of \; the \; object \; (h)}$$
-	$$m = \frac{h'}{h}$$
+	- $m = \frac{Height \; of \; the \; image \; (h')}{Height \; of \; the \; object \; (h)}$
+	- $m = \frac{h'}{h}$
 19. What is the relation between the sign of magnification and whether the image is real or virtual?
 	- Negative magnification - real.
 	- Positive magnification - virtual.
 20. Give the formula for magnification in terms of i) heights from axis, ii) distances from origin.
-	- with heights:
-	$$m = \frac{Height \; of \; the \; image \; (h')}{Height \; of \; the \; object \; (h)}$$
-	- with distances: $$ m = - \frac{v}{u} $$
+	- with heights: $m = \frac{Height \; of \; the \; image \; (h')}{Height \; of \; the \; object \; (h)}$
+	- with distances: $m = - \frac{v}{u}$
 
 ### Long answer type
 
 1. Draw diagram and label different parts of a concave mirror.
-	- ![[./_images/ch9_concave_mirror.png]]
+	- ![[./../_images/ch9_concave_mirror.png]]
 	- P - pole
 	- F - principal focus
 	- C - centre of curvature
@@ -83,7 +81,7 @@
 	- $\angle i$ - Angle of incidence
 	- $\angle r$ - Angle of reflection
 2. Draw diagram and label different parts of a convex mirror.
-	- ![[./_images/ch9_convex_mirror.png]]
+	- ![[./../_images/ch9_convex_mirror.png]]
 	- P - pole
 	- F - principal focus
 	- C - centre of curvature
@@ -116,11 +114,75 @@
 7. What is special about the optical centre of a spherical lens?
 8. Define i) centres of curvature, ii) principal axis, iii) optical centre, iv) aperture, v) principal foci, vi) focal length.
 9. What is the method to locate the principal focus of a convex lens?
+10. In which situation does convex lens give virtual and erect image?
+	- When object is between focus F1 and optical centre O.
+11. Where is the object positioned if the image is highly diminished, point-sized, real, and inverted?
+	- When the object is at infinity.
+12. In which situation does a convex lens produce a diminished, real, and inverted image?
+	- When the object is beyond 2F1.
+13. When does a convex lens create an image that is the same size as the object, real and inverted?
+	- When the object is at 2F1.
+14. Under what condition is the image enlarged, real, and inverted for a convex lens?
+	- When the object is between F1 and 2F1.
+15. When does a convex lens form an infinitely large or highly enlarged, real, and inverted image?
+	- When the object is at focus F1.
+16. In which situation does a convex lens produce an enlarged, virtual, and erect image?
+	- When the object is between focus F1 and the optical centre O.
+17. Where is the object if the image is between F2 and 2F2, diminished, real, and inverted?
+	- When the object is beyond 2F1.
+18. How is the image positioned if the object is at focus F1?
+	- At infinity.
+19. What is the nature of the image if the object is at 2F1?
+	- The image is at 2F2, same size, real, and inverted.
+20. When does a convex lens form a real and inverted image, positioned beyond 2F2?
+	- When the object is between F1 and 2F1.
+21. In which scenario does a convex lens form an image on the same side as the object?
+	- When the object is between focus F1 and the optical centre O.
+22. How is the image characterized if the object is placed at infinity?
+	- The image is at focus F2, highly diminished, point-sized, real, and inverted.
+23. What is the position of the image when the object is between F1 and 2F1?
+	- Beyond 2F2.
+24. How does a convex lens form an image if the object is at focus F1?
+	- The image is at infinity, infinitely large or highly enlarged, real and inverted.
+25. Where is the image formed if the object is positioned beyond 2F1?
+	- Between F2 and 2F2.
+26. Where is the image formed when the object is at infinity?
+	- At focus F2.
+27. Where is the image located if the object is beyond 2F1?
+	- Between F2 and 2F2.
+28. What is the position of the image when the object is at 2F1?
+	- At 2F2.
+29. Where is the image when the object is between F1 and 2F1?
+	- Beyond 2F2.
+30. Where does the image appear if the object is at focus F1?
+	- At infinity.
+31. Where is the image formed when the object is between focus F1 and the optical centre O?
+	- On the same side of the lens as the object.
+
+Table for knowing mapping between object position and image position:
+| **Object Position**                     | **Image Position**                               |
+|-----------------------------------------|-------------------------------------------------|
+| At infinity                             | At focus F2                                      |
+| Beyond 2F1                              | Between F2 and 2F2                               |
+| At 2F1                                  | At 2F2                                           |
+| Between F1 and 2F1                      | Beyond 2F2                                       |
+| At focus F1                             | At infinity                                      |
+| Between focus F1 and optical centre O   | On the same side of the lens as the object       |
+
+32. **Where is the image formed when the object is at infinity?**
+	- At focus F1.
+33. **Where is the image located if the object is between infinity and the optical centre O?**
+	- Between focus F1 and the optical centre O.
+34. **In which situation does a concave lens give a highly diminished, point-sized, virtual, and erect image?**
+	- When the object is at infinity.
+35. **In which situation does a concave lens produce a diminished, virtual, and erect image?**
+	- When the object is between infinity and the optical centre O.
+
 
 ### Long answer type
 
 1. Draw diagram and label different parts of a concave lens.
-	- ![[./_images/ch9_concave_lens.png]]
+	- ![[./../_images/ch9_concave_lens.png]]
 	- O - optical centre
 	- F1 - principal focus
 	- 2F1 = C1 - centre of curvature
@@ -128,7 +190,7 @@
 	- OF1 - focal length
 	- MN - aperture
 2. Draw diagram and label different parts of a convex lens.
-	- ![[./_images/ch9_convex_lens.png]]
+	- ![[./../_images/ch9_convex_lens.png]]
 	- O - optical centre
 	- F1 - principal focus
 	- 2F1 = C1 - centre of curvature
