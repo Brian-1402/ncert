@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Improved Convex Lens Simulation</title>
+    <title>Corrected Convex Lens Simulation</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <style>
         body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
@@ -12,17 +12,17 @@
 <body>
     <script>
         let f = 100; // Focal length
-        let u = -250; // Object distance
+        let u = -300; // Object distance
         let objectHeight = 50;
         let uSlider, fSlider;
 
         function setup() {
-            createCanvas(800, 600);
-            uSlider = createSlider(-400, -50, u, 1);
+            createCanvas(800, 400);
+            uSlider = createSlider(-600, 0, u, 1);
             uSlider.position(10, 10);
             uSlider.input(updateU);
             
-            fSlider = createSlider(50, 200, f, 1);
+            fSlider = createSlider(50, 150, f, 1);
             fSlider.position(10, 40);
             fSlider.input(updateF);
         }
@@ -41,10 +41,10 @@
 
             // Draw lens
             stroke(0, 0, 255);
-            line(0, -150, 0, 150);
+            line(0, -100, 0, 100);
             noFill();
-            arc(-10, 0, 40, 300, -HALF_PI, HALF_PI);
-            arc(10, 0, 40, 300, HALF_PI, -HALF_PI);
+            arc(-5, 0, 20, 200, -HALF_PI, HALF_PI);
+            arc(5, 0, 20, 200, HALF_PI, -HALF_PI);
 
             // Draw focal points
             fill(255, 0, 0);
@@ -71,7 +71,7 @@
             text("Object", u - 20, -objectHeight - 10);
 
             // Draw image
-            if (v > 0 && v < 1000) {  // Prevent drawing when image is at infinity
+            if (abs(v) < 1000) {  // Prevent drawing when image is at infinity
                 stroke(255, 0, 255);
                 line(v, 0, v, -imageHeight);
                 fill(255, 0, 255);
@@ -106,7 +106,7 @@
         }
 
         function updateU() {
-            u = -this.value();
+            u = this.value();
         }
 
         function updateF() {
