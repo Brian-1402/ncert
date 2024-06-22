@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrected Convex Lens Simulation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+    </style>
+</head>
+<body>
+    <script>
+        let f = 100; // Focal length
+        let u = -300; // Object distance
+        let objectHeight = 50;
+        let uSlider, fSlider;
+
+        function setup() {
+            createCanvas(800, 400);
+            uSlider = createSlider(-600, 0, u, 1);
+            uSlider.position(10, 10);
+            uSlider.input(updateU);
+            
+            fSlider = createSlider(50, 150, f, 1);
+            fSlider.position(10, 40);
+            fSlider.input(updateF);
+        }
+
+        function draw() {
+            background(240);
+            translate(width/2, height/2);
+            
+            // Calculate image distance
+            let v = 1 / (1/f + 1/u);
+            let imageHeight = objectHeight * v / u;
+
+            // Draw optical axis
+            stroke(0);
+            line(-width/2, 0, width/2, 0);
+
+            // Draw lens
+            stroke(0, 0, 255);
+            line(0, -100, 0, 100);
+            noFill();
+            arc(-5, 0, 20, 200, -HALF_PI, HALF_PI);
+            arc(5, 0, 20, 200, HALF_PI, -HALF_PI);
+
+            // Draw focal points
+            fill(255, 0, 0);
+            ellipse(-f, 0, 8, 8);
+            ellipse(f, 0, 8, 8);
+            noStroke();
+            text("F", -f - 15, 20);
+            text("F", f + 10, 20);
+
+            // Draw center of curvature
+            fill(0, 255, 255);
+            ellipse(-2*f, 0, 8, 8);
+            ellipse(2*f, 0, 8, 8);
+            noStroke();
+            text("2F", -2*f - 20, 20);
+            text("2F", 2*f + 15, 20);
+
+            // Draw object
+            stroke(0, 255, 0);
+            line(u, 0, u, -objectHeight);
+            fill(0, 255, 0);
+            ellipse(u, -objectHeight, 8, 8);
+            noStroke();
+            text("Object", u - 20, -objectHeight - 10);
+
+            // Draw image
+            if (abs(v) < 1000) {  // Prevent drawing when image is at infinity
+                stroke(255, 0, 255);
+                line(v, 0, v, -imageHeight);
+                fill(255, 0, 255);
+                ellipse(v, -imageHeight, 8, 8);
+                noStroke();
+                text("Image", v + 10, -imageHeight - 10);
+            }
+
+            // Draw rays
+            stroke(255, 165, 0);
+            // Ray 1: Parallel to axis, then through focal point
+            // line(u, -objectHeight, 0, -objectHeight);
+            // line(0, -objectHeight, width/2, (width/2 - f)*(-objectHeight/f);
+            line(u, -objectHeight, 0, -objectHeight);
+            line(0, -objectHeight, v, -imageHeight);
+
+            // Ray 2: Through center (undeviated)
+            line(u, -objectHeight, v, -imageHeight);
+
+            // Ray 3: Through focal point, then parallel to axis
+            // line(u, -objectHeight, 0, -objectHeight * (1 - f/u));
+            // line(0, -objectHeight * (1 - f/u), width/2, -objectHeight * (1 - f/u));
+
+            // Display values
+            fill(0);
+            textAlign(LEFT);
+            text(`Object distance (u): ${u}`, -width/2 + 10, height/2 - 60);
+            text(`Focal length (f): ${f}`, -width/2 + 10, height/2 - 40);
+            text(`Image distance (v): ${v.toFixed(2)}`, -width/2 + 10, height/2 - 20);
+
+            // Label sliders
+            // text("Object Distance", uSlider.x + uSlider.width + 10, uSlider.y + 15);
+            // text("Focal Length", fSlider.x + fSlider.width + 10, fSlider.y + 15);
+        }
+
+        function updateU() {
+            u = this.value();
+        }
+
+        function updateF() {
+            f = this.value();
+        }
+    </script>
+</body>
+</html>
