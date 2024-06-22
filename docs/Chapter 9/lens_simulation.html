@@ -32,8 +32,8 @@
             translate(width/2, height/2);
             
             // Calculate image distance
-            let v = 1 / (1/f - 1/u);
-            let imageHeight = -objectHeight * v / u;
+            let v = 1 / (1/f + 1/u);
+            let imageHeight = objectHeight * v / u;
 
             // Draw optical axis
             stroke(0);
@@ -83,20 +83,22 @@
             // Draw rays
             stroke(255, 165, 0);
             // Ray 1: Parallel to axis, then through focal point
+            // line(u, -objectHeight, 0, -objectHeight);
+            // line(0, -objectHeight, width/2, (width/2 - f)*(-objectHeight/f);
             line(u, -objectHeight, 0, -objectHeight);
-            line(0, -objectHeight, width/2, -objectHeight + (objectHeight * f / v));
+            line(0, -objectHeight, v, -imageHeight);
 
             // Ray 2: Through center (undeviated)
-            line(u, -objectHeight, width/2, -imageHeight);
+            line(u, -objectHeight, v, -imageHeight);
 
             // Ray 3: Through focal point, then parallel to axis
-            line(u, -objectHeight, 0, -objectHeight * (1 - f/u));
-            line(0, -objectHeight * (1 - f/u), width/2, -objectHeight * (1 - f/u));
+            // line(u, -objectHeight, 0, -objectHeight * (1 - f/u));
+            // line(0, -objectHeight * (1 - f/u), width/2, -objectHeight * (1 - f/u));
 
             // Display values
             fill(0);
             textAlign(LEFT);
-            text(`Object distance (u): ${-u}`, -width/2 + 10, height/2 - 60);
+            text(`Object distance (u): ${u}`, -width/2 + 10, height/2 - 60);
             text(`Focal length (f): ${f}`, -width/2 + 10, height/2 - 40);
             text(`Image distance (v): ${v.toFixed(2)}`, -width/2 + 10, height/2 - 20);
 
