@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convex Lens Simulation</title>
+    <title>Improved Convex Lens Simulation</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <style>
         body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
@@ -12,13 +12,19 @@
 <body>
     <script>
         let f = 100; // Focal length
-        let u = -200; // Object distance
+        let u = -250; // Object distance
         let objectHeight = 50;
+        let uSlider, fSlider;
 
         function setup() {
-            createCanvas(600, 400);
-            createSlider(-300, -2*f, u, 1).position(10, 10).input(updateU);
-            createSlider(50, 150, f, 1).position(10, 40).input(updateF);
+            createCanvas(800, 600);
+            uSlider = createSlider(-400, -50, u, 1);
+            uSlider.position(10, 10);
+            uSlider.input(updateU);
+            
+            fSlider = createSlider(50, 200, f, 1);
+            fSlider.position(10, 40);
+            fSlider.input(updateF);
         }
 
         function draw() {
@@ -30,55 +36,77 @@
             let imageHeight = -objectHeight * v / u;
 
             // Draw optical axis
+            stroke(0);
             line(-width/2, 0, width/2, 0);
 
             // Draw lens
             stroke(0, 0, 255);
-            line(0, -100, 0, 100);
+            line(0, -150, 0, 150);
             noFill();
-            arc(-10, 0, 40, 200, -HALF_PI, HALF_PI);
-            arc(10, 0, 40, 200, HALF_PI, -HALF_PI);
+            arc(-10, 0, 40, 300, -HALF_PI, HALF_PI);
+            arc(10, 0, 40, 300, HALF_PI, -HALF_PI);
 
             // Draw focal points
             fill(255, 0, 0);
-            ellipse(-f, 0, 5, 5);
-            ellipse(f, 0, 5, 5);
+            ellipse(-f, 0, 8, 8);
+            ellipse(f, 0, 8, 8);
+            noStroke();
+            text("F", -f - 15, 20);
+            text("F", f + 10, 20);
+
+            // Draw center of curvature
+            fill(0, 255, 255);
+            ellipse(-2*f, 0, 8, 8);
+            ellipse(2*f, 0, 8, 8);
+            noStroke();
+            text("2F", -2*f - 20, 20);
+            text("2F", 2*f + 15, 20);
 
             // Draw object
             stroke(0, 255, 0);
             line(u, 0, u, -objectHeight);
             fill(0, 255, 0);
-            ellipse(u, -objectHeight, 5, 5);
+            ellipse(u, -objectHeight, 8, 8);
+            noStroke();
+            text("Object", u - 20, -objectHeight - 10);
 
             // Draw image
-            if (v > 0) {
+            if (v > 0 && v < 1000) {  // Prevent drawing when image is at infinity
                 stroke(255, 0, 255);
                 line(v, 0, v, -imageHeight);
                 fill(255, 0, 255);
-                ellipse(v, -imageHeight, 5, 5);
+                ellipse(v, -imageHeight, 8, 8);
+                noStroke();
+                text("Image", v + 10, -imageHeight - 10);
             }
 
             // Draw rays
             stroke(255, 165, 0);
-            // Ray 1: Through center
-            line(u, -objectHeight, v, -imageHeight);
-            // Ray 2: Parallel to axis, then through focal point
+            // Ray 1: Parallel to axis, then through focal point
             line(u, -objectHeight, 0, -objectHeight);
-            line(0, -objectHeight, v, -imageHeight);
+            line(0, -objectHeight, width/2, -objectHeight + (objectHeight * f / v));
+
+            // Ray 2: Through center (undeviated)
+            line(u, -objectHeight, width/2, -imageHeight);
+
             // Ray 3: Through focal point, then parallel to axis
-            line(u, -objectHeight, 0, -objectHeight * f / (f - u));
-            line(0, -objectHeight * f / (f - u), v, -imageHeight);
+            line(u, -objectHeight, 0, -objectHeight * (1 - f/u));
+            line(0, -objectHeight * (1 - f/u), width/2, -objectHeight * (1 - f/u));
 
             // Display values
             fill(0);
             textAlign(LEFT);
-            text(`Object distance (u): ${u}`, -width/2 + 10, height/2 - 40);
-            text(`Focal length (f): ${f}`, -width/2 + 10, height/2 - 20);
-            text(`Image distance (v): ${v.toFixed(2)}`, -width/2 + 10, height/2 - 60);
+            text(`Object distance (u): ${-u}`, -width/2 + 10, height/2 - 60);
+            text(`Focal length (f): ${f}`, -width/2 + 10, height/2 - 40);
+            text(`Image distance (v): ${v.toFixed(2)}`, -width/2 + 10, height/2 - 20);
+
+            // Label sliders
+            text("Object Distance", uSlider.x + uSlider.width + 10, uSlider.y + 15);
+            text("Focal Length", fSlider.x + fSlider.width + 10, fSlider.y + 15);
         }
 
         function updateU() {
-            u = this.value();
+            u = -this.value();
         }
 
         function updateF() {
