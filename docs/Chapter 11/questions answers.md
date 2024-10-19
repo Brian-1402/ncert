@@ -43,6 +43,47 @@
 15. Define SI unit of resistance.
 	- If the potential difference across the two ends of a conductor is 1 V and the current through it is 1 A, then the resistance R, of the conductor is 1 $\Omega$.
 	- $1 \; ohm \; = \; \frac{1 \; volt}{1 \; ampere}$
+16. What is a rheostat?
+	- It is a resistor whose resistance can be varied.
+	- Used to regulate current without changing the voltage source.
+17. Properties of the conductor that resistance is dependent on.
+	- length
+	- cross section area
+	- nature of material
+18. Give formula of resistance in terms of conductor properties.
+	- $R \; = \; \rho \frac{l}{A}$
+	- Where $\rho$ (rho) is a constant of proportionality, $l$ is length, $A$ is cross section area.
+19. Properties of series combination of resistors:
+	- The current is the same in every part of the series circuit.
+	- The total potential difference across a combination of resistors in series is equal to the sum of potential difference across the individual resistors. $V = V_1 + V_2 + V_3$ in the case of three resistors in series.
+	- The resistance of the combination $R_s$ equals the sum of their individual resistances, $R_1 + R_2 + R_3$.
+20. Properties of resistors in parallel.
+	- Voltage across each parallel resistor is the same.
+	- The total current $I$, is equal to the sum of the separate currents through each branch of the combination. $I = I_1 + I_2 + I_3$.
+	- The reciprocal of the equivalent resistance of a group of resistances joined in parallel is equal to the sum of the reciprocals of the individual resistances.
+	- $\frac{1}{R_{p}} = \frac{1}{R_{1}} + \frac{1}{R_{2}} + \frac{1}{R_3}$
+21. Disadvantages of series circuit.
+	- The different components connecting in series might need different values of current to operate, but in series they are forced to have the same value of current.
+	- When one component fails the circuit is broken and none of the components works.
+22. Advantages of parallel circuit.
+	- Each component can have the differing amount of current they need.
+	- Failure of one component doesn't break the entire circuit.
+	- Overall resistance of the system decreases.
+23. Relation between heat produced by resistor and the circuit values.
+	- directly proportional to the square of current for a given resistance.
+	- directly proportional to resistance for a given current.
+	- directly proportional to the time for which the current flows through the resistor.
+24. When voltage is fixed, to produce more heat from a resistor, do we increase resistance or decrease resistance?
+	- We decrease resistance, because in this scenario, power is inversely related to resistance.
+	- Use formula: $P = V^2/R$
+	- Tip: we do not use the $P = I^2R$ formula here because we now have to deal with two variables, $I$ and $R$. As we change R to decide best value for max heat, I also changes accordingly, so calculating P gets confusing. But if we use earlier formula of V and R, here V stays constant and we can just change R to directly calculate value of P.
+25. Practical uses of Joules heating effect.
+	- Heating appliances like kettle, toaster, heater, oven etc.
+	- Light generated via heat, example: light bulb.
+	- Fuse.
+26. Define SI unit of power.
+    - The SI unit of electric power is watt (W). It is the power consumed by a device that carries 1 A of current when operated at a potential difference of 1 V.
+    - 1 W = 1 volt × 1 ampere = 1 V A.
 ### Long answer type
 
 1. Question1
