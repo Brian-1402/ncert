@@ -12,3 +12,6 @@
 ## Chapter 11 - Electricity
 - [Main question answer set](Chapter 11/questions answers)
 - [Textbook annotations](./Chapter 11/annotated.pdf)
+## Chapter 12 - Magnetism
+- [Main question answer set](Chapter 12/questions answers)
+- [Textbook annotations](./Chapter 12/annotated.pdf)
